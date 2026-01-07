@@ -13,13 +13,12 @@ display.set_caption("Attack of the Vampire Pizzas!")
 pizza_img = image.load("game_assets/vampire.png")
 pizza_surf = Surface.convert_alpha(pizza_img)
 VAMPIRE_PIZZA = transform.scale(pizza_surf, (100, 100))
-
-background_img = image.load("game_assets/restaurant.jpg")
-background_surf = Surface.convert_alpha(background_img)
-BACKGROUND = transform.scale(background_surf, WINDOW_RES)
-
-GAME_WINDOW.blit(BACKGROUND, (0, 0))
 GAME_WINDOW.blit(VAMPIRE_PIZZA, (900, 400))
+
+draw.circle(GAME_WINDOW, (255, 0, 0), (925, 425), 25, 0)
+
+draw.rect(GAME_WINDOW, (160, 82, 45), (890, 390, 125, 125), 5)
+draw.rect(GAME_WINDOW, (160, 82, 45), (890, 265, 125, 125), 0)
 
 game_running = True
 
